@@ -9,8 +9,9 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: [
-                    'babel-loader'
-                ]
+                    'ts-loader'
+                ],
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
@@ -23,9 +24,10 @@ module.exports = {
     },
 
     resolve: {
-        alias: {
-            "jodit-react": './src'
-        },
+        extensions: [ '.js' ],
+        // alias: {
+        //     "jodit-react": './src'
+        // },
     },
 
     output: {
